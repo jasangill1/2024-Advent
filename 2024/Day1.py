@@ -7,7 +7,7 @@ Right_number.sort()
 print('the left numbers are:', Left_number)
 print('the right numbers are:', Right_number)
 
-new_list = ([(y - x) for x, y in zip(Left_number,Right_number)])
+new_list = (sum([abs(y - x) for x, y in zip(Left_number,Right_number)]))
 
 D = 0
 
