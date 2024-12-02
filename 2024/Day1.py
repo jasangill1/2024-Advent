@@ -4,15 +4,7 @@ Right_number=[4,3,5,3,9,3]
 Left_number.sort()
 Right_number.sort()
 
-print('the left numbers are:', Left_number)
-print('the right numbers are:', Right_number)
+print('Total Distance:',sum([abs(y - x) for x, y in zip(Left_number,Right_number)]))
 
-new_list = (sum([abs(y - x) for x, y in zip(Left_number,Right_number)]))
 
-D = 0
-
-for i in new_list:
-    D += i
-
-print(D)
 
