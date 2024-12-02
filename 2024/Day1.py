@@ -1,10 +1,15 @@
-Left_number=[3,4,2,1,3,3]
-Right_number=[4,3,5,3,9,3]
+Data = """
+90335   63839
+39658   98833
+58540   26663
+34246   52806
+83116   82954
+"""
 
-Left_number.sort()
-Right_number.sort()
+rows = Data.strip().split('\n')
 
-print('Total Distance:',sum([abs(y - x) for x, y in zip(Left_number,Right_number)]))
+x2, y2 = zip(*(map(int, row.split())for row in rows))
+print('Total Distance:',sum([abs(y - x) for x, y in zip(sorted(x2),sorted(y2))]))
 
 
 
