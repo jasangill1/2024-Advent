@@ -12,8 +12,7 @@ data ="""7 6 4 2 1
 col = data.strip().split('\n')
 print(col)
 
-for array in col: 
-    cleaned = [list(map(int, array.split()))]
+cleaned = [list(map(int, array.split()))for array in col]
 
 count = 0 
 
