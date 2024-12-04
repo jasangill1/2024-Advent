@@ -24,6 +24,7 @@ for group in cleaned:
         if abs(firstNum - num) >= 3:
             firstNum = num 
             count =+ 1
+            
     
     
 print(count)
