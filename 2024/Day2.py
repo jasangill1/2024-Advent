@@ -19,11 +19,11 @@ count = 0
 
 for group in cleaned:
     check = False    
-firstNum = data[0]
-for x in data:
-    if abs(firstNum - x) >= 3:
-        firstNum = x 
-        count =+ 1
+    firstNum = data[0]
+    for x in data:
+        if abs(firstNum - x) >= 3:
+            firstNum = x 
+            count =+ 1
     
     
 print(count)
