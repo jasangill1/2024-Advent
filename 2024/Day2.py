@@ -19,8 +19,12 @@ for group in cleaned:
     check = True    
     firstNum = group[0]
     increase = all(group[i] > group[i - 1] for i in range(1, len(group)))
-    for num in group:
-        if abs(firstNum - num) > 3:
+    decrease = all(group[i] < group[i - 1] for i in range(1, len(group)))
+    
+    if not(increase or decrease):
+        check = False
+    for num in range(1,len(group)):
+        if abs(group[num] - group[num - 1] - num) > 3:
             check = False
             break
         firstNum = num 
