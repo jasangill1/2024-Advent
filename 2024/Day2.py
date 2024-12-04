@@ -1,9 +1,6 @@
 data ="""1 3 6 7 9
 1 3 6 7 9
-1 3 6 7 9
- 1 2 3 4 5 6
-901241059
- 12345
+1 5 8 9 2
 """
 
 
@@ -24,7 +21,7 @@ for group in cleaned:
     if not(increase or decrease):
         check = False
     for num in range(1,len(group)):
-        if abs(group[num] - group[num - 1] - num) > 3:
+        if abs(group[num] - group[num - 1]) > 3:
             check = False
             break
         firstNum = num 
