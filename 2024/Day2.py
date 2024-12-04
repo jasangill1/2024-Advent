@@ -1,18 +1,15 @@
-data ="""7 6 4 2 1
-1 2 7 8 9
-9 7 6 2 1
-1 3 2 4 5
-8 6 4 4 1
+data ="""1 3 6 7 9
 1 3 6 7 9
+1 3 6 7 9
+ 1 2 3 4 5 6
 """
 
 
 
 
-col = data.strip().split('\n')
-print(col)
+grouped = data.strip().split('\n')
 
-cleaned = [list(map(int, array.split()))for array in col]
+cleaned = [list(map(int, group.split()))for group in grouped]
 
 count = 0 
 
@@ -20,11 +17,11 @@ for group in cleaned:
     check = False    
     firstNum = group[0]
     for num in group:
-        if abs(firstNum - num) >= 3:
+        if abs(firstNum - num) <= 3:
             firstNum = num 
             check = True
     if check: 
-        count =+ 1
+        count += 1
     
     
 print(count)
