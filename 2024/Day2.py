@@ -4,8 +4,6 @@ data ="""1 3 6 7 9
 """
 
 
-
-
 grouped = data.strip().split('\n')
 
 cleaned = [list(map(int, group.split()))for group in grouped]
