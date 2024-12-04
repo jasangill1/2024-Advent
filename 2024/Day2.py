@@ -20,9 +20,9 @@ count = 0
 for group in cleaned:
     check = False    
     firstNum = group[0]
-    for x in group:
-        if abs(firstNum - x) >= 3:
-            firstNum = x 
+    for num in group:
+        if abs(firstNum - num) >= 3:
+            firstNum = num 
             count =+ 1
     
     
