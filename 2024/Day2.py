@@ -9,8 +9,8 @@ data ="""7 6 4 2 1
 
 
 
-rows = data.split('\n')
-print(rows)
+col = data.split('\n')
+print(col)
 
 list= []
 for group in rows:
@@ -26,4 +26,4 @@ for x in data:
 print(count)
         
         
- 
+        
