@@ -5,7 +5,6 @@ Data = """
 34246   52806
 83116   82954
 """
-
 rows = Data.strip().split('\n')
 
 x2, y2 = zip(*(map(int, row.split())for row in rows))
