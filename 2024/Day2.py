@@ -23,7 +23,7 @@ for group in cleaned:
     for num in group:
         if abs(firstNum - num) >= 3:
             firstNum = num 
-            count =+ 1
+            count = True
     if check: 
         count =+ 1
     
