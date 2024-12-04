@@ -9,14 +9,17 @@ data ="""7 6 4 2 1
 
 
 
-col = data.split('\n')
+col = data.strip().split('\n')
 print(col)
 
-list= []
-for group in rows:
-    
-firstNum = data[0]
+for array in col: 
+    cleaned = [list(map(int, array.split()))]
+
 count = 0 
+
+for group in cleaned:
+    check = False    
+firstNum = data[0]
 for x in data:
     if abs(firstNum - x) >= 3:
         firstNum = x 
