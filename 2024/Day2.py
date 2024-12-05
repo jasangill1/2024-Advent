@@ -22,12 +22,17 @@ for group in cleaned:
         count += 1
     else:
         for num in range(len(group)):
-            if abs(group[num] - group[num - 1]) > 3:
-                check = False
+            temp_group = group[:num] + group[num + 1:]
+            increasing = all(temp_group[j] > temp_group[j - 1]
+                             for j in range(1, len(temp_group)))
+            decreasing = all(temp_group[j] < temp_group[j - 1]
+                             for j in range(1, len(temp_group)))
+            within_limit = all(
+                abs(temp_group[j] - temp_group[j - 1]) <= 3 for j in range(1, len(temp_group)))
+
+            if (increasing or decreasing) and within_limit:
+                count += 1
                 break
-            firstNum = num
-        if check:
-            count += 1
 
 
 print(count)
