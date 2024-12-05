@@ -21,8 +21,7 @@ for group in cleaned:
     if (increase or decrease) and inLimit:
         count += 1
     else:
-
-        for num in range(1, len(group)):
+        for num in range(len(group)):
             if abs(group[num] - group[num - 1]) > 3:
                 check = False
                 break
