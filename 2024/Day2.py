@@ -16,6 +16,8 @@ for group in cleaned:
     increase = all(group[i] > group[i - 1] for i in range(1, len(group)))
     decrease = all(group[i] < group[i - 1] for i in range(1, len(group)))
     
+    inLimit = all(group[i] < group[i - 1] <= 3 for i in range(1, len(group)))
+    
     if not(increase or decrease):
         check = False
     for num in range(1,len(group)):
